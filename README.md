@@ -24,7 +24,7 @@ A modern TUI wrapper for the classic Unix `dd` command, bringing safety, visuali
 
 ```
 ╔════════════════════════════════════════════════════════════════╗
-║ DD Interface v1.0.0 - Main Menu    [Professional Disk Imaging]║
+║ DD Interface v1.0.0 - Main Menu    [Professional Disk Imaging] ║
 ╠════════════════════════════════════════════════════════════════╣
 ║   [1] Backup Disk to Image File                                ║
 ║   [2] Restore Image File to Disk                               ║
@@ -322,6 +322,3 @@ Authors/contributors are not responsible for data loss, hardware damage, or any 
 **Support:** Check [FAQ](#faq) → Review [GitHub Issues](https://github.com/opensolutionsgroup/dd-interface/issues) → Check `ddi.log` → Open new issue
 
 ---
-
-**Made with ❤️ for the Linux community**  
-*Making `dd` safe, visual, and accessible since 2024*
