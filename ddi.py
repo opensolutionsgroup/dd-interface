@@ -1602,11 +1602,6 @@ def show_about_screen(stdscr, app_h):
     """Display about/credits screen (Easter egg accessed via F12)."""
     h, w = stdscr.getmaxyx()
     
-    # Obfuscated author information (base64 + XOR)
-    import base64
-    _a = base64.b64decode("UGF1bCBNaXNrb3Zza3k=").decode('utf-8')
-    _b = "".join([chr(ord(c) ^ 0x00) for c in _a])
-    
     # Prepare about text
     about_text = [
         "",
@@ -1616,7 +1611,7 @@ def show_about_screen(stdscr, app_h):
         "═" * 60,
         "",
         "Written by:",
-        f"  {_b}",
+        "  Paul Miskovsky",
         "",
         "Licensed under:",
         "  GNU General Public License v3.0 (GPLv3)",
@@ -1691,7 +1686,7 @@ def show_about_screen(stdscr, app_h):
                      line.startswith("Source Code:"):
                     # Section headers - bold
                     win.addstr(i + 2, 2, display_line, curses.A_BOLD | curses.color_pair(6))
-                elif _b in line.strip():
+                elif line.strip().startswith("Paul Miskovsky"):
                     # Author name - highlighted
                     win.addstr(i + 2, 2, display_line, curses.A_BOLD | curses.color_pair(3))
                 elif "https://" in line:
